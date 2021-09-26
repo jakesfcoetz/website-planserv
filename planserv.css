@@ -6,6 +6,11 @@
   --background-color: #ffffff;
 }
 
+/* ===== body ===== */
+body {
+  margin: 0px;
+}
+
 /* ===== Scroll bar style ===== */
 /* width */
 ::-webkit-scrollbar {
