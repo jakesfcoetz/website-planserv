@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
+    siteUrl: 'https://www.planserv.co.za',
     title: 'planserv',
   },
   plugins: ['gatsby-plugin-sass'],
