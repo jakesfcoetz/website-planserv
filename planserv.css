@@ -1,0 +1,67 @@
+/* ===== Variables ===== */
+:root {
+  --planserv-color-green: #004c1c;
+  --planserv-color-gray: #808080;
+  --planserv-color-blue: #080f39;
+  --background-color: #ffffff;
+}
+
+/* ===== body ===== */
+body {
+  margin: 0px;
+}
+
+/* ===== Scroll bar style ===== */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--planserv-color-gray);
+  border-radius: 20px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--planserv-color-green);
+  border-radius: 20px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--planserv-color-blue);
+}
+
+/* ===== Top Navigation bar ===== */
+#nav-bar {
+  z-index: 999;
+  width: 100%;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  background-color: var(--background-color);
+}
+/* Menu */
+#menu {
+  padding-right: 50px;
+}
+/* Menu items */
+.menu-button {
+  color: var(--planserv-color-gray);
+  font-family: ARIAL;
+  font-size: 15px;
+  padding: 10px 15px;
+  border: 0px;
+  background-color: var(--background-color);
+  cursor: pointer;
+  text-align: center;
+}
+/* Menu items hover */
+.menu-button:hover {
+  color: var(--planserv-color-blue);
+  text-shadow: 0 0 12px var(--planserv-color-blue);
+}
+
+/* ===== img used for full page ===== */
+.img-page {
+  width: 100%;
+}
