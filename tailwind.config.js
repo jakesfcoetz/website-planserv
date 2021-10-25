@@ -3,9 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      'planserv-green': '#00ff00',
-      'planserv-blue': '#0000ff',
-      'planserv-gray': '#ff0000',
+      'planserv-green': '#004c1c',
+      'planserv-blue': '#080f39',
+      'planserv-gray': '#808080',
     },
 
     extend: {},

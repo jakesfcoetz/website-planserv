@@ -7,7 +7,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 //--- CSS
 const pageStyles = {
-  padding: 10,
+  padding: 0,
+  margin: 0,
 };
 
 //--- JSX
