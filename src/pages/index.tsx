@@ -1,5 +1,7 @@
 import * as React from 'react';
 import '../scss/index.scss';
+//--- Components
+import TopNav from '../components/nav';
 
 // styles
 const pageStyles = {
@@ -128,15 +130,14 @@ const links = [
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 className="text-planserv-blue">
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
+      <title>Planserv</title>
+      <TopNav></TopNav>
+      <img className="img-page" src="./src/images/home.png" id="home" />
+      <img className="img-page" src="./src/images/about.png" id="about" />
+      <img className="img-page" src="./src/images/companydetails.png" id="company-details" />
+      <img className="img-page" src="./src/images/services.png" id="services" />
+      <img className="img-page" src="./src/images/theplanner.png" id="the-planner" />
+      <img className="img-page" src="./src/images/contactus.png" id="contact-us" />
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.js</code> to see this page update in real-time.{' '}
         <span role="img" aria-label="Sunglasses smiley emoji">
