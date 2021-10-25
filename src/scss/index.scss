@@ -37,10 +37,10 @@ body {
 
 /* ===== Top Navigation bar ===== */
 #nav-bar {
-  z-index: 999;
+  z-index: 9;
   width: 100%;
   text-align: right;
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: var(--background-color);
 }
