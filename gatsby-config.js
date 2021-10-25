@@ -5,13 +5,27 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        postCssPlugins: [
-          require('tailwindcss'),
-          require('./tailwind.config.js'), // Optional: Load custom Tailwind CSS configuration
-        ],
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [require('tailwindcss'), require('./tailwind.config.js')],
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
