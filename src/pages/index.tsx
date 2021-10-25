@@ -129,7 +129,7 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
-      <h1 className="lg:text-red-700 text-center text-3xl">
+      <h1 className="text-planserv-blue">
         Congratulations
         <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
