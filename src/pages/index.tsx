@@ -2,6 +2,7 @@ import * as React from 'react';
 import '../scss/index.scss';
 //--- Components
 import TopNav from '../components/nav';
+import Example from '../components/main-nav';
 //--- Images
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -16,7 +17,8 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <title>Planserv</title>
-      <TopNav></TopNav>
+      {/* <TopNav></TopNav> */}
+      <Example></Example>
       <StaticImage id="home" className="img-page" src="../images/home.png" alt="home" />
       <StaticImage id="about" className="img-page" src="../images/about.png" alt="about" />
       <StaticImage id="company-details" className="img-page" src="../images/companydetails.png" alt="company-details" />
