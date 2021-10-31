@@ -4,11 +4,16 @@
   --planserv-color-gray: #808080;
   --planserv-color-blue: #080f39;
   --background-color: #ffffff;
+  --nav-height-open: 100px;
+  --nav-height-collapsed: 50px;
 }
 
-/* ===== body ===== */
-body {
+/* ===== Main Doc ===== */
+body,
+html {
   margin: 0px;
+  height: 100%;
+  background-color: var(--background-color);
 }
 
 /* ===== Scroll bar style ===== */
@@ -32,17 +37,48 @@ body {
 }
 
 /* ===== Top Navigation bar ===== */
-#nav-bar {
-  z-index: 999;
-  width: 100%;
-  text-align: right;
+nav {
+  background-color: var(--background-color);
   position: fixed;
   top: 0;
-  background-color: var(--background-color);
+  width: 100%;
+  height: var(--nav-height-collapsed);
+  text-align: right;
 }
+
+/*--- Collapsed state */
+nav.collapse {
+  animation: collapse 0.5s ease forwards;
+}
+
+nav.open {
+  animation: open 0.5s ease-out forwards;
+}
+
+/*--- Collapsed state */
+@keyframes collapse {
+  from {
+    height: var(--nav-height-open);
+  }
+  to {
+    height: var(--nav-height-collapsed);
+  }
+}
+
+/*--- Opened state */
+@keyframes open {
+  from {
+    height: var(--nav-height-collapsed);
+  }
+  to {
+    height: var(--nav-height-open);
+  }
+}
+
 /* Menu */
 #menu {
   padding-right: 50px;
+  background: transparent;
 }
 /* Menu items */
 .menu-button {
@@ -51,7 +87,7 @@ body {
   font-size: 15px;
   padding: 10px 15px;
   border: 0px;
-  background-color: var(--background-color);
+  background: transparent;
   cursor: pointer;
   text-align: center;
 }
@@ -61,7 +97,29 @@ body {
   text-shadow: 0 0 12px var(--planserv-color-blue);
 }
 
-/* ===== img used for full page ===== */
-.img-page {
-  width: 100%;
+/* ===== div used for full page ===== */
+.page {
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+.page#home {
+  background-image: url('./images/home.jpg');
+}
+.page#about {
+  background-image: url('./images/about.jpg');
+}
+.page#company-details {
+  background-image: url('./images/companyDetails.jpg');
+}
+.page#services {
+  background-image: url('./images/services.jpg');
+}
+.page#the-planner {
+  background-image: url('./images/thePlanner.jpg');
+}
+.page#contact-us {
+  background-image: url('./images/contactUs.jpg');
 }

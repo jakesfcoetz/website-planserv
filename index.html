@@ -8,7 +8,8 @@
     <base href="/" />
   </head>
   <body>
-    <div id="nav-bar">
+    <!-- Navbar -->
+    <nav id="nav-bar">
       <div id="menu">
         <button type="button" class="menu-button" value="Home" onclick="window.location.href='#home'">HOME</button>
         <button type="button" class="menu-button" value="About" onclick="window.location.href='#about'">ABOUT</button>
@@ -19,12 +20,15 @@
         <button type="button" class="menu-button" value="The Planner" onclick="window.location.href='#the-planner'">THE PLANNER</button>
         <button type="button" class="menu-button" value="Contact Us" onclick="window.location.href='#contact-us'">CONTACT US</button>
       </div>
-    </div>
-    <img class="img-page" src="./images/home.png" id="home" />
-    <img class="img-page" src="./images/about.png" id="about" />
-    <img class="img-page" src="./images/companydetails.png" id="company-details" />
-    <img class="img-page" src="./images/services.png" id="services" />
-    <img class="img-page" src="./images/theplanner.png" id="the-planner" />
-    <img class="img-page" src="./images/contactus.png" id="contact-us" />
+    </nav>
+    <!-- Pages -->
+    <div class="page" id="home"></div>
+    <div class="page" id="about"></div>
+    <div class="page" id="company-details"></div>
+    <div class="page" id="services"></div>
+    <div class="page" id="the-planner"></div>
+    <div class="page" id="contact-us"></div>
+    <!-- script -->
+    <script src="planserv.js"></script>
   </body>
 </html>
