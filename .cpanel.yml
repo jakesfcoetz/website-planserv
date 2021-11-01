@@ -3,4 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/plansvpu/public_html/
     - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp planserv.css $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
