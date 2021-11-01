@@ -1,7 +1,9 @@
 /* ===== Variables ===== */
 :root {
   --planserv-color-green: #004c1c;
+  --planserv-overlay-green: #004c1c6c;
   --planserv-color-gray: #808080;
+  --planserv-overlay-gray: #808080c9;
   --planserv-color-blue: #080f39;
   --background-color: #ffffff;
   --nav-height-open: 100px;
@@ -116,23 +118,24 @@ nav.open {
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
+  margin-top: 3px;
 }
 
 .page#home {
-  background-image: url('./images/home.jpg');
+  background-image: linear-gradient(var(--planserv-overlay-gray), var(--planserv-overlay-green)), url('./images/home.jpg');
 }
 .page#about {
-  background-image: url('./images/about.jpg');
+  background-image: linear-gradient(var(--planserv-overlay-green), var(--planserv-overlay-gray)), url('./images/about.jpg');
 }
 .page#company-details {
-  background-image: url('./images/companyDetails.jpg');
+  background-image: linear-gradient(var(--planserv-overlay-gray), var(--planserv-overlay-green)), url('./images/companyDetails.jpg');
 }
 .page#services {
-  background-image: url('./images/services.jpg');
+  background-image: linear-gradient(var(--planserv-overlay-green), var(--planserv-overlay-gray)), url('./images/services.jpg');
 }
 .page#the-planner {
-  background-image: url('./images/thePlanner.jpg');
+  background-image: linear-gradient(var(--planserv-overlay-gray), var(--planserv-overlay-green)), url('./images/thePlanner.jpg');
 }
 .page#contact-us {
-  background-image: url('./images/contactUs.jpg');
+  background-image: linear-gradient(var(--planserv-overlay-green), var(--planserv-overlay-gray)), url('./images/contactUs.jpg');
 }
