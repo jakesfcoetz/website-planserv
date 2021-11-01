@@ -52,11 +52,11 @@ nav {
 
 /*--- Collapsed state */
 nav.collapse {
-  animation: collapse 0.5s ease forwards;
+  animation: collapse 1s ease forwards;
 }
 
 nav.open {
-  animation: open 0.5s ease-out forwards;
+  animation: open 1s ease-out forwards;
 }
 
 /*--- Collapsed state */
@@ -88,6 +88,13 @@ nav.open {
 }
 #nav-logo > img {
   height: 70%;
+  transition: opacity 0.7s, transform 1s;
+  transform: translate(0px, 0px);
+}
+
+nav.open #nav-logo img {
+  opacity: 0;
+  transform: translate(300px, 200px);
 }
 
 /* Menu */
@@ -119,8 +126,13 @@ nav.open {
   background-size: auto 100%;
   background-position: center;
   margin-top: 3px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Pages - background */
 .page#home {
   background-image: linear-gradient(var(--planserv-overlay-gray), var(--planserv-overlay-green)), url('./images/home.jpg');
 }
@@ -138,4 +150,19 @@ nav.open {
 }
 .page#contact-us {
   background-image: linear-gradient(var(--planserv-overlay-green), var(--planserv-overlay-gray)), url('./images/contactUs.jpg');
+}
+
+/* Pages - contents */
+.page#home > img {
+  max-height: 50vh;
+}
+.page#about {
+}
+.page#company-details {
+}
+.page#services {
+}
+.page#the-planner {
+}
+.page#contact-us {
 }
