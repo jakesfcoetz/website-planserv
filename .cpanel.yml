@@ -4,4 +4,5 @@ deployment:
     - export DEPLOYPATH=/home/plansvpu/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp planserv.css $DEPLOYPATH
+    - /bin/cp planserv.js $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
