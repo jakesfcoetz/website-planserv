@@ -164,7 +164,6 @@ nav.open #nav-logo img {
 /* ===== div used for full page ===== */
 .page {
   min-height: 100%;
-  padding: 7%;
   margin-top: 3px;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -225,6 +224,7 @@ nav.open #nav-logo img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 80vw;
 }
 .page#about > div.planserv-text-box > p {
   text-align: justify;
@@ -245,12 +245,14 @@ nav.open #nav-logo img {
   margin: 0px;
 }
 .page#company-details > div.planserv-text-box > ul p {
-  padding-top: 7px;
   white-space: nowrap;
 }
 @media screen and (max-width: 1000px) {
   .page#company-details {
     flex-flow: column;
+  }
+  .page#company-details > div.planserv-text-box {
+    max-width: 80vw;
   }
 }
 
@@ -283,7 +285,7 @@ nav.open #nav-logo img {
     margin: 20px;
     max-width: 80vw;
   }
-  .page#services > div > div > img {
+  .page#services > div > div.planserv-text-box > img {
     width: 15%;
   }
 }
@@ -312,7 +314,7 @@ nav.open #nav-logo img {
 }
 @media screen and (max-width: 1000px) {
   .page#the-planner {
-    padding-top: 50px;
+    padding: 50px 0px;
   }
   .page#the-planner > div:not(:first-of-type) {
     flex-direction: column;
