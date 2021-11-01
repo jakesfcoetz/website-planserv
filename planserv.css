@@ -41,21 +41,23 @@ html {
   color: var(--planserv-color-blue);
 }
 
+h1,
+h2,
+h3 {
+  margin: 0px;
+  text-shadow: 2px 2px 3px var(--planserv-color-gray);
+  text-align: center;
+}
 h1 {
   font-size: 40px;
-  margin: 0px;
 }
 
 h2 {
   font-size: 25px;
-  margin: 0px;
-  text-align: center;
 }
 
 h3 {
   font-size: 20px;
-  margin: 0px;
-  text-align: center;
 }
 
 p {
@@ -209,10 +211,9 @@ nav.open #nav-logo img {
   width: 40vw;
   margin: 20px;
 }
-.page#home > p {
+.page#home > h1 {
   font-weight: normal;
   font-size: 32px;
-  text-shadow: 1px 1px 3px var(--planserv-color-gray);
 }
 
 /* about */
@@ -242,13 +243,11 @@ nav.open #nav-logo img {
   justify-content: space-evenly;
 }
 .page#company-details > div {
-  min-height: 250px;
   padding: 30px 40px 15px 40px;
 }
 .page#company-details > div > ul {
   list-style-type: none;
-  line-height: 180%;
-  padding: 0px;
+  padding: 20px 0px 15px 0px;
   margin: 0px;
 }
 .page#company-details > div > ul p {
