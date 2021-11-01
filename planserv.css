@@ -1,21 +1,14 @@
 /* ===== Variables ===== */
 :root {
   --planserv-color-green: #004c1c;
-  --planserv-overlay-green: #004c1c6c;
   --planserv-color-gray: #808080;
-  --planserv-overlay-gray: #808080c9;
   --planserv-color-blue: #080f39;
   --background-color: #ffffff;
+  --background-overlay-green: #004c1c44;
+  --background-overlay-gray: #808080be;
+  --text-block-color: #ffffff77;
   --nav-height-open: 70px;
   --nav-height-collapsed: 30px;
-}
-
-/* ===== Main Doc ===== */
-body,
-html {
-  margin: 0px;
-  height: 100%;
-  background-color: var(--background-color);
 }
 
 /* ===== Scroll bar style ===== */
@@ -38,13 +31,58 @@ html {
   background: var(--planserv-color-blue);
 }
 
+/* ===== Main Doc ===== */
+body,
+html {
+  margin: 0px;
+  height: 100%;
+  background-color: var(--background-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--planserv-color-blue);
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 0px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0px;
+  text-align: center;
+}
+
+p {
+  font-size: 17px;
+  margin: 0px;
+}
+
+.planserv-separator {
+  height: 5px;
+  background-color: var(--planserv-color-green);
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.planserv-text-box {
+  background-color: var(--text-block-color);
+  border-radius: 20px;
+}
+
 /* ===== Top Navigation bar ===== */
 nav {
   background-color: var(--background-color);
   position: fixed;
   top: 0;
   width: 100%;
-  height: var(--nav-height-collapsed);
+  height: var(--nav-height-open);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,35 +172,153 @@ nav.open #nav-logo img {
 
 /* Pages - background */
 .page#home {
-  background-image: linear-gradient(var(--planserv-overlay-gray), var(--planserv-overlay-green)), url('./images/home.jpg');
+  background-image: linear-gradient(var(--background-overlay-gray), var(--background-overlay-green)),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/home.jpg');
 }
 .page#about {
-  background-image: linear-gradient(var(--planserv-overlay-green), var(--planserv-overlay-gray)), url('./images/about.jpg');
+  background-image: linear-gradient(var(--background-overlay-green), var(--background-overlay-gray)),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/about.jpg');
 }
 .page#company-details {
-  background-image: linear-gradient(var(--planserv-overlay-gray), var(--planserv-overlay-green)), url('./images/companyDetails.jpg');
+  background-image: linear-gradient(var(--background-overlay-gray), var(--background-overlay-green)),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/companyDetails.jpg');
 }
 .page#services {
-  background-image: linear-gradient(var(--planserv-overlay-green), var(--planserv-overlay-gray)), url('./images/services.jpg');
+  background-image: linear-gradient(var(--background-overlay-green), var(--background-overlay-gray)),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/services.jpg');
 }
 .page#the-planner {
-  background-image: linear-gradient(var(--planserv-overlay-gray), var(--planserv-overlay-green)), url('./images/thePlanner.jpg');
+  background-image: linear-gradient(var(--background-overlay-gray), var(--background-overlay-green)),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/thePlanner.jpg');
 }
 .page#contact-us {
-  background-image: linear-gradient(var(--planserv-overlay-green), var(--planserv-overlay-gray)), url('./images/contactUs.jpg');
+  background-image: linear-gradient(var(--background-overlay-green), var(--background-overlay-gray)),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/contactUs.jpg');
 }
 
-/* Pages - contents */
+/*--- Pages - contents ---*/
+
+/* home */
 .page#home > img {
-  max-height: 50vh;
+  max-width: 250px;
+  padding-top: 30px;
 }
+.page#home > div {
+  height: 5px;
+  background-color: var(--planserv-color-blue);
+  width: 40vw;
+  margin: 20px;
+}
+.page#home > p {
+  font-weight: normal;
+  font-size: 32px;
+  text-shadow: 1px 1px 3px var(--planserv-color-gray);
+}
+
+/* about */
 .page#about {
+  padding: 0px 10%;
 }
+.page#about > div {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page#about > div > div {
+  height: 5px;
+  background-color: var(--planserv-color-green);
+  width: 100px;
+  margin: 20px;
+}
+.page#about > div > p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* company-details */
 .page#company-details {
+  flex-flow: row;
+  justify-content: space-evenly;
 }
-.page#services {
+.page#company-details > div {
+  min-height: 250px;
+  padding: 30px 40px 15px 40px;
 }
-.page#the-planner {
+.page#company-details > div > ul {
+  list-style-type: none;
+  line-height: 180%;
+  padding: 0px;
+  margin: 0px;
 }
+.page#company-details > div > ul p {
+  padding-top: 7px;
+}
+
+/* services */
+.page#services > div:not(:first-of-type) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.page#services > div > div {
+  padding: 20px;
+  max-width: 25vw;
+  text-align: center;
+}
+.page#services > div > div > img {
+  width: 20%;
+  aspect-ratio: 1;
+  margin-bottom: 25px;
+}
+.page#services > div > div > h3 {
+  margin-bottom: 15px;
+}
+
+/* the-planner */
+.page#the-planner > div:not(:first-of-type) {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.page#the-planner > div > div:first-child > img {
+  box-shadow: 0px 0px 10px 2px var(--planserv-color-gray);
+  max-height: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.page#the-planner > div > div > p {
+  padding: 30px;
+  max-width: 700px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* contact-us */
 .page#contact-us {
+  text-align: center;
+}
+.page#contact-us > div.planserv-text-box {
+  padding: 30px;
+}
+.page#contact-us > div.planserv-text-box > div:not(.planserv-separator) {
+  padding-bottom: 20px;
+}
+.page#contact-us > div > div:last-of-type {
+  padding-bottom: 0px;
+}
+.page#contact-us > div > div:last-of-type p {
+  display: inline;
+}
+.page#contact-us > div > div.planserv-separator {
+  margin-left: auto;
+  margin-right: auto;
+}
+.page#contact-us > div > div > p:not(:first-child) {
+  color: var(--planserv-color-green);
 }
