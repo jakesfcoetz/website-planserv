@@ -43,7 +43,9 @@ nav {
   top: 0;
   width: 100%;
   height: var(--nav-height-collapsed);
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*--- Collapsed state */
@@ -73,6 +75,17 @@ nav.open {
   to {
     height: var(--nav-height-open);
   }
+}
+
+/* Logo */
+#nav-logo {
+  height: 100%;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+#nav-logo > img {
+  height: 80%;
 }
 
 /* Menu */
