@@ -6,8 +6,8 @@
   --planserv-overlay-gray: #808080c9;
   --planserv-color-blue: #080f39;
   --background-color: #ffffff;
-  --nav-height-open: 100px;
-  --nav-height-collapsed: 50px;
+  --nav-height-open: 70px;
+  --nav-height-collapsed: 30px;
 }
 
 /* ===== Main Doc ===== */
@@ -87,7 +87,7 @@ nav.open {
   align-items: center;
 }
 #nav-logo > img {
-  height: 80%;
+  height: 70%;
 }
 
 /* Menu */
