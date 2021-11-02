@@ -32,7 +32,10 @@
 }
 
 /* ===== Main Doc ===== */
-body,
+body {
+  height: 100%;
+  margin: 0px;
+}
 html {
   margin: 0px;
   height: 100%;
@@ -51,33 +54,34 @@ h3 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: clamp(25px, 40px, 3vw);
 }
 
 h2 {
-  font-size: 25px;
+  font-size: clamp(20px, 30px, 2.5vw);
 }
 
 h3 {
-  font-size: 20px;
+  font-size: clamp(15px, 20px, 2vw);
 }
 
 p {
-  font-size: 17px;
+  font-size: clamp(15px, 25px, 1.5vw);
   margin: 0px;
 }
 
 .planserv-separator {
   height: 5px;
   background-color: var(--planserv-color-green);
-  width: 100px;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  width: min(10vw, 100px);
+  margin-top: min(4vw, 20px);
+  margin-bottom: min(5vw, 30px);
 }
 
 .planserv-text-box {
   background-color: var(--text-block-color);
   border-radius: 20px;
+  padding: min(5vw, 40px);
 }
 
 /* ===== Top Navigation bar ===== */
@@ -163,7 +167,8 @@ nav.open #nav-logo img {
 
 /* ===== div used for full page ===== */
 .page {
-  min-height: 100%;
+  min-height: calc(100% - 10vw);
+  padding: 5vw;
   margin-top: 3px;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -204,23 +209,23 @@ nav.open #nav-logo img {
 
 /* home */
 .page#home > img {
-  max-width: 250px;
+  width: max(150px, 20vw);
   padding-top: 30px;
 }
 .page#home > div {
   height: 5px;
   background-color: var(--planserv-color-blue);
-  width: 40vw;
+  width: max(300px, 40vw);
   margin: 20px;
 }
-.page#home > h1 {
+.page#home > h1,
+.page#home > h2,
+.page#home > h3 {
   font-weight: normal;
-  font-size: 32px;
 }
 
 /* about */
 .page#about > div.planserv-text-box {
-  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,23 +241,21 @@ nav.open #nav-logo img {
   flex-flow: row;
   justify-content: space-evenly;
 }
+
 .page#company-details > div.planserv-text-box {
-  padding: 30px 40px 15px 40px;
+  width: 50%;
+  margin: 10px;
 }
-.page#company-details > div.planserv-text-box > ul {
-  list-style-type: none;
-  padding: 20px 0px 15px 0px;
-  margin: 0px;
+.page#company-details > div.planserv-text-box > h2 {
+  padding-bottom: 15px;
 }
-.page#company-details > div.planserv-text-box > ul p {
-  white-space: nowrap;
-}
+
 @media screen and (max-width: 1000px) {
   .page#company-details {
     flex-flow: column;
   }
   .page#company-details > div.planserv-text-box {
-    max-width: 80vw;
+    width: 80vw;
   }
 }
 
@@ -264,35 +267,34 @@ nav.open #nav-logo img {
   justify-content: space-evenly;
 }
 .page#services > div > div.planserv-text-box {
+  width: 25vw;
   padding: 20px;
-  max-width: 25vw;
   text-align: center;
+  margin: 5px;
 }
 .page#services > div > div.planserv-text-box > img {
   width: 20%;
   aspect-ratio: 1;
-  margin-bottom: 25px;
+  margin-bottom: min(3vw, 25px);
 }
 .page#services > div > div.planserv-text-box > h3 {
   margin-bottom: 15px;
 }
 @media screen and (max-width: 1000px) {
+  .page#services > h1 {
+    padding-top: 30px;
+  }
   .page#services > div:not(:first-of-type) {
     flex-direction: column;
     align-items: center;
   }
   .page#services > div > div.planserv-text-box {
-    margin: 20px;
-    max-width: 80vw;
-  }
-  .page#services > div > div.planserv-text-box > img {
-    width: 15%;
+    width: 80vw;
   }
 }
 
-/* the-planner */
+/* the-planner ---<> Continue from here */
 .page#the-planner > div:not(:first-of-type) {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -307,19 +309,16 @@ nav.open #nav-logo img {
 }
 
 .page#the-planner > div > div.planserv-text-box > p {
-  padding: 30px;
   max-width: 700px;
   text-align: justify;
   text-justify: inter-word;
 }
 @media screen and (max-width: 1000px) {
   .page#the-planner {
-    padding: 50px 0px;
+    padding-top: 50px;
   }
   .page#the-planner > div:not(:first-of-type) {
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
   }
   .page#the-planner > div > div.planserv-text-box {
     margin-top: 30px;
