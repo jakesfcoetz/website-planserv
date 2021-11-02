@@ -293,23 +293,22 @@ nav.open #nav-logo img {
   }
 }
 
-/* the-planner ---<> Continue from here */
+/* the-planner */
 .page#the-planner > div:not(:first-of-type) {
   display: flex;
+  width: 100%;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
-
 .page#the-planner > div > div:first-child > img {
   box-shadow: 0px 0px 10px 2px var(--planserv-color-gray);
   max-height: 300px;
   aspect-ratio: 1;
   border-radius: 50%;
+  margin: 3vw;
 }
-
 .page#the-planner > div > div.planserv-text-box > p {
-  max-width: 700px;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -320,36 +319,22 @@ nav.open #nav-logo img {
   .page#the-planner > div:not(:first-of-type) {
     flex-direction: column;
   }
-  .page#the-planner > div > div.planserv-text-box {
-    margin-top: 30px;
-    width: 80vw;
-  }
-  .page#the-planner > div > div.planserv-text-box > p {
-    max-width: 100%;
-  }
 }
 
 /* contact-us */
-.page#contact-us {
-  text-align: center;
-}
 .page#contact-us > div.planserv-text-box {
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .page#contact-us > div.planserv-text-box > div:not(.planserv-separator) {
   padding-bottom: 20px;
 }
-.page#contact-us > div > div:last-of-type {
+.page#contact-us > div.planserv-text-box > div:last-of-type {
   padding-bottom: 0px;
 }
-.page#contact-us > div > div:last-of-type p {
-  display: inline;
-}
-.page#contact-us > div > div.planserv-separator {
-  margin-left: auto;
-  margin-right: auto;
-}
-.page#contact-us > div > div > p:not(:first-child) {
+.page#contact-us > div.planserv-text-box > div > p:not(:first-child),
+.page#contact-us > div.planserv-text-box > div > p > span {
   color: var(--planserv-color-green);
 }
 @media screen and (max-width: 1000px) {
