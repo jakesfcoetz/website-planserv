@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="Jacques Coetzee" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PLANSERV</title>
     <link rel="stylesheet" type="text/css" href="./planserv.css" />
     <base href="/" />
@@ -14,21 +15,39 @@
         <img src="./images/logo.png" />
       </div>
       <div id="menu">
-        <button type="button" class="menu-button" value="Home" onclick="window.location.href='#home'">HOME</button>
-        <button type="button" class="menu-button" value="About" onclick="window.location.href='#about'">ABOUT</button>
-        <button type="button" class="menu-button" value="Company Details" onclick="window.location.href='#company-details'">
-          COMPANY DETAILS
-        </button>
-        <button type="button" class="menu-button" value="Services" onclick="window.location.href='#services'">SERVICES</button>
-        <button type="button" class="menu-button" value="The Planner" onclick="window.location.href='#the-planner'">THE PLANNER</button>
-        <button type="button" class="menu-button" value="Contact Us" onclick="window.location.href='#contact-us'">CONTACT US</button>
+        <div id="menu-list">
+          <button type="button" class="menu-button" value="Home" onclick="window.location.href='#home'; toggleMenuClose();">HOME</button>
+          <button type="button" class="menu-button" value="About" onclick="window.location.href='#about'; toggleMenuClose();">ABOUT</button>
+          <button
+            type="button"
+            class="menu-button"
+            value="Company Details"
+            onclick="window.location.href='#company-details'; toggleMenuClose();"
+          >
+            COMPANY DETAILS
+          </button>
+          <button type="button" class="menu-button" value="Services" onclick="window.location.href='#services'; toggleMenuClose();">
+            SERVICES
+          </button>
+          <button type="button" class="menu-button" value="The Director" onclick="window.location.href='#the-director'; toggleMenuClose();">
+            THE DIRECTOR
+          </button>
+          <button type="button" class="menu-button" value="Contact Us" onclick="window.location.href='#contact-us'; toggleMenuClose();">
+            CONTACT US
+          </button>
+        </div>
+        <div id="hamburger" onclick="toggleMobileMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </nav>
     <!-- Pages - Home -->
     <div class="page" id="home">
       <img src="./images/logo-main.png" />
       <div></div>
-      <h1>TOWN & REGIONAL PLANNING</h1>
+      <h2>TOWN & REGIONAL PLANNING</h2>
     </div>
     <!-- Pages - About -->
     <div class="page" id="about">
@@ -54,29 +73,20 @@
     <div class="page" id="company-details">
       <div class="planserv-text-box">
         <h2>COMPANY DETAILS</h2>
-        <ul>
-          <li><p>Company Name: PLANSERV (PTY) LTD</p></li>
-          <li><p>Company Registration: 2013/191660/07</p></li>
-          <li><p>SAACPP Registration: SAACPP-PS-001</p></li>
-          <li><p>Director's SACPLAN Registration: A/1524/2012</p></li>
-          <li><p>Central Supplier Database: MAAA0768588</p></li>
-          <li><p>B-BBEE Status: B-BBEE Level 4 Contributor</p></li>
-        </ul>
+        <p>Company Name: PLANSERV (PTY) LTD</p>
+        <p>Company Registration: 2013/191660/07</p>
+        <p>SAACPP Registration: SAACPP-PS-001</p>
+        <p>SACPLAN Registration: A/1524/2012</p>
+        <p>Central Supplier Database: MAAA0768588</p>
+        <p>B-BBEE Status: B-BBEE Level 4 Contributor</p>
       </div>
       <div class="planserv-text-box">
         <h2>AFFILIATIONS</h2>
-        <ul>
-          <li><p>South African Council for Planners (SACPLAN)</p></li>
-          <li>
-            <p>
-              South African Association of Consulting <br />
-              Professional Planners (SAACPP)
-            </p>
-          </li>
-          <li><p>South African Planning Institute (SAPI)</p></li>
-          <li><p>Women in Planning South Africa (WIPSA)</p></li>
-          <li><p>Golden Key International Honor Society</p></li>
-        </ul>
+        <p>South African Council for Planners (SACPLAN)</p>
+        <p>South African Association of Consulting Professional Planners (SAACPP)</p>
+        <p>South African Planning Institute (SAPI)</p>
+        <p>Women in Planning South Africa (WIPSA)</p>
+        <p>Golden Key International Honor Society</p>
       </div>
     </div>
     <!-- Pages - Services -->
@@ -88,16 +98,16 @@
           <img src="images/icon-tick.png" />
           <h3>LAND USE PLANNING</h3>
           <p>
-            Application for rezoning, consent use, subdivision, consolidation, departure, relaxation of building lines, removal of
-            restrictive title conditions, etc.
+            Rezoning, consent use, subdivision, consolidation, departures, relaxation of building lines, removal of restrictive title
+            conditions, etc.
           </p>
         </div>
         <div class="planserv-text-box">
           <img src="images/icon-house.png" />
           <h3>PROPERTY DEVELOPMENT</h3>
           <p>
-            Property development advice, due diligence and feasibility studies, identification of development land as well as establishment
-            of new development areas
+            Property development advice, due diligence and feasibility studies, identification of development land and establishment of new
+            development areas
           </p>
         </div>
         <div class="planserv-text-box">
@@ -107,8 +117,8 @@
         </div>
       </div>
     </div>
-    <!-- Pages - The Planner -->
-    <div class="page" id="the-planner">
+    <!-- Pages - The Director -->
+    <div class="page" id="the-director">
       <h1>THE DIRECTOR</h1>
       <div class="planserv-separator"></div>
       <div>
@@ -148,8 +158,7 @@
           <p>082 923 6171</p>
         </div>
         <div>
-          <p>PROFESSIONAL</p>
-          <p>YET PERSONAL SERVICE</p>
+          <p>PROFESSIONAL <span>YET PERSONAL SERVICE</span></p>
         </div>
       </div>
     </div>
