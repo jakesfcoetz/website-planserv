@@ -232,9 +232,9 @@ nav.open #nav-logo img {
   background-image: linear-gradient(var(--background-overlay-green), var(--background-overlay-gray)),
     linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/services.jpg');
 }
-.page#the-planner {
+.page#the-director {
   background-image: linear-gradient(var(--background-overlay-gray), var(--background-overlay-green)),
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/thePlanner.jpg');
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/theDirector.jpg');
 }
 .page#contact-us {
   background-image: linear-gradient(var(--background-overlay-green), var(--background-overlay-gray)),
@@ -329,30 +329,30 @@ nav.open #nav-logo img {
   }
 }
 
-/* the-planner */
-.page#the-planner > div:not(:first-of-type) {
+/* the-director */
+.page#the-director > div:not(:first-of-type) {
   display: flex;
   width: 100%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.page#the-planner > div > div:first-child > img {
+.page#the-director > div > div:first-child > img {
   box-shadow: 0px 0px 10px 2px var(--planserv-color-gray);
   max-height: 300px;
   aspect-ratio: 1;
   border-radius: 50%;
   margin: 3vw;
 }
-.page#the-planner > div > div.planserv-text-box > p {
+.page#the-director > div > div.planserv-text-box > p {
   text-align: justify;
   text-justify: inter-word;
 }
 @media screen and (max-width: 1000px) {
-  .page#the-planner {
+  .page#the-director {
     padding-top: 50px;
   }
-  .page#the-planner > div:not(:first-of-type) {
+  .page#the-director > div:not(:first-of-type) {
     flex-direction: column;
   }
 }
