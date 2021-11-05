@@ -15,14 +15,32 @@
         <img src="./images/logo.png" />
       </div>
       <div id="menu">
-        <button type="button" class="menu-button" value="Home" onclick="window.location.href='#home'">HOME</button>
-        <button type="button" class="menu-button" value="About" onclick="window.location.href='#about'">ABOUT</button>
-        <button type="button" class="menu-button" value="Company Details" onclick="window.location.href='#company-details'">
-          COMPANY DETAILS
-        </button>
-        <button type="button" class="menu-button" value="Services" onclick="window.location.href='#services'">SERVICES</button>
-        <button type="button" class="menu-button" value="The Planner" onclick="window.location.href='#the-planner'">THE PLANNER</button>
-        <button type="button" class="menu-button" value="Contact Us" onclick="window.location.href='#contact-us'">CONTACT US</button>
+        <div id="menu-list">
+          <button type="button" class="menu-button" value="Home" onclick="window.location.href='#home'; toggleMenuClose();">HOME</button>
+          <button type="button" class="menu-button" value="About" onclick="window.location.href='#about'; toggleMenuClose();">ABOUT</button>
+          <button
+            type="button"
+            class="menu-button"
+            value="Company Details"
+            onclick="window.location.href='#company-details'; toggleMenuClose();"
+          >
+            COMPANY DETAILS
+          </button>
+          <button type="button" class="menu-button" value="Services" onclick="window.location.href='#services'; toggleMenuClose();">
+            SERVICES
+          </button>
+          <button type="button" class="menu-button" value="The Planner" onclick="window.location.href='#the-planner'; toggleMenuClose();">
+            THE PLANNER
+          </button>
+          <button type="button" class="menu-button" value="Contact Us" onclick="window.location.href='#contact-us'; toggleMenuClose();">
+            CONTACT US
+          </button>
+        </div>
+        <div id="hamburger" onclick="toggleMobileMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </nav>
     <!-- Pages - Home -->

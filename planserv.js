@@ -1,8 +1,8 @@
-//--- Initial scroll position
-var scrollState = 0;
+var scrollState = 0; //--- Initial scroll position
 
-//--- Store nav bar classes
+//--- Store classes
 var navClasses = document.getElementsByTagName('nav')[0].classList;
+var menuClasses = document.getElementById('menu-list').classList;
 
 window.addEventListener('scroll', function () {
   var currentScroll = window.scrollY;
@@ -17,8 +17,23 @@ window.addEventListener('scroll', function () {
     navClasses.add('collapse');
   } else {
     //--- Up
-    // navClasses.remove('collapse');
-    // navClasses.add('open');
   }
   scrollState = currentScroll;
 });
+
+//--- Menu toggle functions
+function toggleMobileMenu() {
+  if (menuClasses.contains('mobile-open')) {
+    toggleMenuClose();
+  } else {
+    toggleMenuOpen();
+  }
+}
+
+function toggleMenuOpen() {
+  menuClasses.add('mobile-open');
+}
+
+function toggleMenuClose() {
+  menuClasses.remove('mobile-open');
+}
