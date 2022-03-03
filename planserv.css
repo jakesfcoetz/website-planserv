@@ -273,24 +273,28 @@ nav.open #nav-logo img {
 }
 
 /* company-details */
-.page#company-details {
+.page#company-details #main {
+  display: flex;
   flex-flow: row;
   justify-content: space-evenly;
 }
 
-.page#company-details > div.planserv-text-box {
+.page#company-details #main > div.planserv-text-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
   width: 50%;
   margin: 10px;
 }
-.page#company-details > div.planserv-text-box > h2 {
+.page#company-details #main > div.planserv-text-box > h2 {
   padding-bottom: 15px;
 }
 
 @media screen and (max-width: 1000px) {
-  .page#company-details {
+  .page#company-details #main {
     flex-flow: column;
   }
-  .page#company-details > div.planserv-text-box {
+  .page#company-details #main > div.planserv-text-box {
     width: 80vw;
   }
 }
